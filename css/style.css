@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 13px;
+}
+body {
+  font-family: Barlow;
+  font-weight: 500;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.clear {
+  clear: both;
+}
+.testimonial-grid {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  gap: 2rem;
+  background-color: rgb(236, 242, 248);
+  grid-template-areas:
+    ". . . . . . . . . . . . . . . ."
+    ". . . . item1 item1 item1 item1 item2 item2 item3 item3 . . . ."
+    ". . . . item4 item4 item5 item5 item5 item5 item3 item3 . . . ."
+    ". . . . . . . . . . . . . . . .";
+}
+.testimonial {
+  border-radius: 10px;
+  padding: 30px 0;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.info {
+  width: 150px;
+  float: left;
+  margin-left: 20px;
+  text-transform: capitalize;
+}
+.info-h3 {
+  color: white;
+}
+.info-span {
+  color: white;
+  opacity: 50%;
+}
+.box3 .info .info-span,
+.box4 .info .info-span {
+  color: rgb(140, 140, 140);
+}
+.box4 .info-h3,
+.box3 .info-h3 {
+  color: rgb(72, 85, 106);
+}
+.box3 .info-span .box4 .info-span {
+  color: rgb(72, 85, 106);
+}
+.box-h2 {
+  margin: 20px 0;
+  color: rgb(207, 207, 207);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.box-p {
+  color: rgb(207, 207, 207);
+  opacity: 70%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.box3 .box-h2,
+.box4 .box-h2 {
+  color: rgb(72, 85, 106);
+}
+.box3 .box-p,
+.box4 .box-p {
+  color: rgb(72, 85, 106);
+}
+.box1 {
+  background-color: rgb(117, 65, 200);
+  grid-area: item1;
+  background-image: url(../image/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right 20%top;
+}
+.box2 {
+  background-color: rgb(72, 85, 106);
+  grid-area: item2;
+}
+.box4,
+.box3 {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 5px 50px 2px rgba(48, 18, 18, 0.177);
+}
+.box5 {
+  background-color: rgb(25, 33, 46);
+  grid-area: item5;
+}
+.box3 {
+  grid-area: item3;
+}
+.box4 {
+  grid-area: item4;
+}
+@media (max-width: 425px) {
+  .testimonial-grid {
+    grid-template-areas:
+      ". . item1 item1 item1 item1 item1 item1 item1 item1 . ."
+      ". . item2 item2 item2 item2 item2 item2 item2 item2 . ."
+      ". . item4 item4 item4 item4 item4 item4 item4 item4 . ."
+      ". . item5 item5 item5 item5 item5 item5 item5 item5 . ."
+      ". . item3 item3 item3 item3 item3 item3 item3 item3 . .";
+  }
+}
